@@ -1,24 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. USER INFO SETUP ---
-    // Retrieve user data to display email in header
-    const storedUserJSON = localStorage.getItem('user');
-    if (storedUserJSON) {
-        const storedUser = JSON.parse(storedUserJSON);
-        document.getElementById('userEmailDisplay').textContent = storedUser.email;
-    }
-
-    // --- 2. LOGOUT LOGIC ---
-    const logoutBtn = document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', () => {
-            // Remove the session flag (but optionally keep the registered user)
-            localStorage.removeItem('loggedIn');
-            // Redirect to login page
-            window.location.href = 'index.html';
-        });
-    }
-
-    // --- 3. MOCK DATA INITIALIZATION ---
+    // --- MOCK DATA INITIALIZATION ---
     // Simulating database data using JavaScript arrays
     const mockData = {
         totalUsers: 1432,

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - T-rexo Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="global.js"></script>
+    <style>
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        .mock-pie-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+        }
+
+        .mock-pie {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            /* Values will be overridden by JS */
+            background: conic-gradient(#a855f7 0% 40%, #ec4899 40% 75%, #3b82f6 75% 100%);
+        }
+
+        .pie-legend {
+            margin-left: 40px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">T-rexo Admin</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="analytics.html" class="active">Analytics</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h2>Analytics</h2>
+                <div class="user-info">
+                    <span class="user-email-display">admin@example.com</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <div class="dashboard-body">
+                <div class="analytics-grid">
+                    <!-- Bar Chart -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Monthly User Growth (Bar Chart)</h3>
+                        </div>
+                        <div class="mock-chart" id="userGrowthChart">
+                            <!-- Bars injected via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Traffic Sources (Pie Chart)</h3>
+                        </div>
+                        <div class="mock-pie-container">
+                            <div class="mock-pie" id="trafficPie"></div>
+                            <div class="pie-legend" id="trafficLegend">
+                                <!-- Legend items injected by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="analytics.js"></script>
+</body>
+</html>

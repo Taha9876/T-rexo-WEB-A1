@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - T-rexo Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="global.js"></script>
+    <style>
+        .notif-list {
+            list-style: none;
+            padding: 0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .notif-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s;
+        }
+        .notif-item:last-child {
+            border-bottom: none;
+        }
+        .notif-item.read {
+            opacity: 0.6;
+        }
+        .notif-text {
+            font-size: 15px;
+        }
+        .notif-actions {
+            display: flex;
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">T-rexo Admin</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="notifications.html" class="active">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h2>Notifications</h2>
+                <div class="user-info">
+                    <span class="user-email-display">admin@example.com</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <div class="dashboard-body">
+                <ul class="notif-list" id="notifList">
+                    <!-- Notifications JS injection -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="notifications.js"></script>
+</body>
+</html>

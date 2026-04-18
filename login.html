@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - T-rexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // If already logged in, redirect to dashboard
+        if (localStorage.getItem('loggedIn') === 'true') {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h2>Welcome Back</h2>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                    <div id="loginEmailError" class="error-message">Valid email is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                    <div id="loginPasswordError" class="error-message">Password is required.</div>
+                </div>
+                <button type="submit">Login</button>
+                <div id="loginFeedback" class="feedback-message"></div>
+            </form>
+            <div class="auth-links">
+                Don't have an account? <a href="signup.html">Sign up here</a>.
+            </div>
+            <div class="auth-links" style="margin-top: 10px;">
+                <a href="index.html">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

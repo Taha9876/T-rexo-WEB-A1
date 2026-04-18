@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - T-rexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h2>Create an Account</h2>
+            <form id="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                    <div id="emailError" class="error-message">Valid email is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter a password">
+                    <div id="passwordError" class="error-message">Password must be at least 6 characters.</div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                    <div id="confirmError" class="error-message">Passwords do not match.</div>
+                </div>
+                <button type="submit">Sign Up</button>
+                <div id="feedbackMessage" class="feedback-message"></div>
+            </form>
+            <div class="auth-links">
+                Already have an account? <a href="login.html">Login here</a>.
+            </div>
+            <div class="auth-links" style="margin-top: 10px;">
+                <a href="index.html">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

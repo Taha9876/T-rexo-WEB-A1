@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - T-rexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="global.js"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">T-rexo Admin</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <h2>Overview</h2>
+                <div class="user-info">
+                    <span class="user-email-display">admin@example.com</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <!-- Dashboard Body -->
+            <div class="dashboard-body">
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="card">
+                        <div class="card-title">Total Users</div>
+                        <div class="card-value" id="totalUsersCard">--</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Total Orders</div>
+                        <div class="card-value" id="totalOrdersCard">--</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Revenue</div>
+                        <div class="card-value" id="revenueCard">--</div>
+                    </div>
+                </div>
+
+                <!-- Mock Chart Area -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Weekly Sales</h3>
+                    </div>
+                    <div class="mock-chart" id="salesChart">
+                        <!-- Bars injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

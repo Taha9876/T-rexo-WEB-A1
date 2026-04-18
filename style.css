@@ -177,14 +177,50 @@ a {
     color: #555;
 }
 
-/* Responsive */
+/* Responsive Landing Page */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 16px 20px;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .nav.show {
+        display: flex;
     }
 
     .nav ul {
-        gap: 4px;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        display: block;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .hero-content h1 {
@@ -644,13 +680,19 @@ body.light-theme .admin-table td {
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         padding: 16px 20px;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     body.light-theme .sidebar {
         border-bottom-color: #e2e8f0;
+    }
+
+    .sidebar-header-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .sidebar-logo {
@@ -658,16 +700,35 @@ body.light-theme .admin-table td {
         font-size: 20px;
     }
 
+    .sidebar-hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    body.light-theme .sidebar-hamburger {
+        color: #1e293b;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+        display: none;
+        margin-top: 16px;
+    }
+
+    .sidebar-nav.show {
+        display: block;
+    }
+
     .sidebar-nav ul {
         display: flex;
+        flex-direction: column;
         gap: 8px;
-        overflow-x: auto;
-        padding-bottom: 5px; /* Scrollbar clearance */
     }
 
     .sidebar-nav li {
         margin-bottom: 0;
-        white-space: nowrap;
     }
 
     .dashboard-header {

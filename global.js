@@ -31,4 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'login.html';
         });
     });
+
+    // 5. Mobile Sidebar Toggle
+    const sidebarHamburger = document.getElementById('sidebarHamburger');
+    const sidebarNav = document.getElementById('sidebarNav');
+    if (sidebarHamburger && sidebarNav) {
+        sidebarHamburger.addEventListener('click', () => {
+            sidebarNav.classList.toggle('show');
+        });
+    }
 });
